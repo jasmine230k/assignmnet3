@@ -5,7 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mood Board</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
+    body {
+      background-color: #f5f0ff; /* light lavender */
+      color: #4b4453; /* soft dark purple */
+      margin: 0;
+    }
+
+    /* Centered Lavender Navbar */
+    .custom-navbar {
+      background-color: #f5f0ff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .custom-link {
+      font-family: 'Georgia', serif;
+      font-size: 0.95rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #7f6bb0 !important;
+      padding: 0.5rem 1.5rem;
+    }
+
+    .custom-link:hover {
+      color: #4b3e77 !important;
+      text-decoration: none;
+    }
+
+    .logo-initial {
+      font-family: 'Georgia', serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #7f6bb0;
+      display: inline-block;
+      line-height: 1;
+    }
+
+    header {
+      background-color: #b799ff;
+      border-radius: 10px;
+    }
+
+    h2, h3, h4 {
+      color: #7f6bb0;
+    }
+
+    footer {
+      background-color: #b799ff;
+      color: white;
+      border-radius: 10px;
+    }
+
+    ul {
+      list-style-type: square;
+    }
+
     .color-box {
       height: 100px;
       width: 100%;
@@ -19,45 +74,57 @@
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Jas Portfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+  <!-- ✅ Centered Lavender Navbar -->
+  <nav class="navbar navbar-expand-md custom-navbar py-3">
+    <div class="container position-relative">
+      <!-- J Logo (MOBILE ONLY) -->
+      <a class="navbar-brand d-md-none" href="index.html">
+        <span class="logo-initial">J</span>
+      </a>
+
+      <!-- Hamburger (MOBILE ONLY) -->
+      <button class="navbar-toggler d-md-none position-absolute end-0" type="button"
+        data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+        aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item"><a class="nav-link active" href="moodboard.html">Mood Board</a></li>
+
+      <!-- Nav Links (desktop/tablet visible) -->
+      <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+        <ul class="navbar-nav flex-wrap justify-content-center align-items-center text-center gap-3 w-100">
+          <!-- LEFT -->
+          <li class="nav-item"><a class="nav-link custom-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link custom-link" href="work.html">WORK</a></li>
+          <li class="nav-item"><a class="nav-link custom-link" href="moodboard.html">MOODBOARD</a></li>
+
+          <!-- Center J (desktop/tablet only) -->
+          <li class="nav-item d-none d-md-block">
+            <a class="nav-link logo-initial" href="index.html">J</a>
+          </li>
+
+          <!-- RIGHT -->
+          <li class="nav-item"><a class="nav-link custom-link" href="about.html">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link custom-link" href="services.html">SERVICES</a></li>
+          <li class="nav-item"><a class="nav-link custom-link" href="contact.html">CONTACT</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Page Content -->
+  <!-- ✅ Page Content -->
   <div class="container py-5">
     <h1 class="text-center mb-5">My Mood Board</h1>
 
     <!-- Section 1: Color Palettes -->
     <h3 class="mb-3">Color Palettes</h3>
     <div class="row mb-5">
-      <div class="col-md-3">
-        <div class="color-box" style="background-color: #F8E1F4;">#F8E1F4</div>
-      </div>
-      <div class="col-md-3">
-        <div class="color-box" style="background-color: #A2D2FF;">#A2D2FF</div>
-      </div>
-      <div class="col-md-3">
-        <div class="color-box" style="background-color: #FFC8DD;">#FFC8DD</div>
-      </div>
-      <div class="col-md-3">
-        <div class="color-box" style="background-color: #CDB4DB;">#CDB4DB</div>
-      </div>
+      <div class="col-md-3"><div class="color-box" style="background-color: #F8E1F4;">#F8E1F4</div></div>
+      <div class="col-md-3"><div class="color-box" style="background-color: #A2D2FF;">#A2D2FF</div></div>
+      <div class="col-md-3"><div class="color-box" style="background-color: #FFC8DD;">#FFC8DD</div></div>
+      <div class="col-md-3"><div class="color-box" style="background-color: #CDB4DB;">#CDB4DB</div></div>
     </div>
 
     <!-- Section 2: Design Style Inspiration -->
@@ -65,31 +132,25 @@
     <div class="row mb-5">
       <div class="col-md-4">
         <div class="card">
-          <img src="https://source.unsplash.com/300x200/?minimal,design" class="card-img-top" alt="Minimal Design">
-          <div class="card-body">
-            <p class="card-text text-center">Minimal Layout</p>
-          </div>
+          <img src="https://visualcomposer.com/wp-content/uploads/2019/07/simplecity.jpg" class="card-img-top" alt="Minimal Design">
+          <div class="card-body"><p class="card-text text-center">Minimal Layout</p></div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card">
-          <img src="https://source.unsplash.com/300x200/?typography,design" class="card-img-top" alt="Typography">
-          <div class="card-body">
-            <p class="card-text text-center">Bold Typography</p>
-          </div>
+          <img src="https://ih1.redbubble.net/image.413031343.6686/st,small,507x507-pad,600x600,f8f8f8.u7.jpg" class="card-img-top" alt="Typography">
+          <div class="card-body"><p class="card-text text-center">Bold Typography</p></div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card">
-          <img src="https://source.unsplash.com/300x200/?pastel,colors" class="card-img-top" alt="Pastel Theme">
-          <div class="card-body">
-            <p class="card-text text-center">Pastel Theme</p>
-          </div>
+          <img src="https://png.pngtree.com/template/20210823/ourmid/pngtree-landing-page-background-with-leaves-and-pastel-colors-image_581265.jpg" class="card-img-top" alt="Pastel Theme">
+          <div class="card-body"><p class="card-text text-center">Pastel Theme</p></div>
         </div>
       </div>
     </div>
 
-    <!-- Section 3: Inspirational Quotes -->
+    <!-- Section 3: Quotes -->
     <h3 class="mb-3">Quotes That Inspire Me</h3>
     <div class="row mb-5">
       <div class="col-md-6">
@@ -104,7 +165,7 @@
       </div>
     </div>
 
-    <!-- Section 4: Favorite Tools -->
+    <!-- Section 4: Tools -->
     <h3 class="mb-3">My Favorite Tools</h3>
     <div class="row">
       <div class="col-md-3">
@@ -115,19 +176,19 @@
       </div>
       <div class="col-md-3">
         <div class="card text-center p-3">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Canva_Logo.png" class="img-fluid" alt="Canva" style="height: 60px;">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Canva_Logo.svg/460px-Canva_Logo.svg.png" class="img-fluid" alt="Canva" style="height: 60px;">
           <p class="mt-2 mb-0">Canva</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="card text-center p-3">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Unsplash_logo.svg" class="img-fluid" alt="Unsplash" style="height: 60px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Unsplash_wordmark_logo.svg/500px-Unsplash_wordmark_logo.svg.png" class="img-fluid" alt="Unsplash" style="height: 60px;">
           <p class="mt-2 mb-0">Unsplash</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="card text-center p-3">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Pinterest-logo.png" class="img-fluid" alt="Pinterest" style="height: 60px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pinterest_Logo_3.svg/500px-Pinterest_Logo_3.svg.png" class="img-fluid" alt="Pinterest" style="height: 60px;">
           <p class="mt-2 mb-0">Pinterest</p>
         </div>
       </div>
