@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #f5f0ff; 
+      color: #4b4453; 
+      margin: 0;
+    }
+
+
+    .custom-navbar {
+      background-color: #f5f0ff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .custom-link {
+      font-family: 'Georgia', serif;
+      font-size: 0.95rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #7f6bb0 !important;
+      padding: 0.5rem 1.5rem;
+    }
+
+    .custom-link:hover {
+      color: #4b3e77 !important;
+      text-decoration: none;
+    }
+
+    .logo-initial {
+      font-family: 'Georgia', serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #7f6bb0;
+      display: inline-block;
+      line-height: 1;
+    }
+
+    header {
+      background-color: #b799ff;
+      border-radius: 10px;
+    }
+
+    h2, h3, h4 {
+      color: #7f6bb0;
+    }
+
+    footer {
+      background-color: #b799ff;
+      color: white;
+      border-radius: 10px;
+    }
+
+    ul {
+      list-style-type: square;
+    }
+
+    a.resource-link {
+      color: #4b3e77;
+      text-decoration: none;
+    }
+
+    a.resource-link:hover {
+      text-decoration: underline;
+    }
+
+    .resource-section {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  
+  <nav class="navbar navbar-expand-md custom-navbar py-3">
+    <div class="container position-relative">
+
+
+      <a class="navbar-brand d-md-none" href="index.html">
+        <span class="logo-initial">J</span>
+      </a>
+
+
+      <button class="navbar-toggler d-md-none position-absolute end-0" type="button"
+        data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+     
+      <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+        <ul class="navbar-nav flex-wrap justify-content-center align-items-center text-center gap-3 w-100">
+
+         
+          <li class="nav-item"><a class="nav-link custom-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link custom-link" href="moodboard.html">MOODBOARD</a></li>
+
+          <li class="nav-item d-none d-md-block">
+            <a class="nav-link logo-initial" href="index.html">J</a>
+          </li>
+
+
+          <li class="nav-item"><a class="nav-link custom-link" href="resources.html">RESOURCES</a></li>
+          <li class="nav-item"><a class="nav-link custom-link" href="services.html">SERVICES</a></li>
+          <li class="nav-item"><a class="nav-link custom-link" href="contact.html">CONTACT</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Design Resources</h2>
+
+    <div class="resource-section">
+      <h4>🛠️ Tools & Platforms</h4>
+      <ul>
+        <li><a class="resource-link" href="https://www.figma.com" target="_blank">Figma</a> – Collaborative UI/UX design tool</li>
+        <li><a class="resource-link" href="https://www.canva.com" target="_blank">Canva</a> – Easy-to-use graphic design platform</li>
+        <li><a class="resource-link" href="https://fonts.google.com" target="_blank">Google Fonts</a> – Free font library</li>
+        <li><a class="resource-link" href="https://coolors.co" target="_blank">Coolors</a> – Color palette generator</li>
+      </ul>
+    </div>
+
+    <div class="resource-section">
+      <h4>🎨 Inspiration</h4>
+      <ul>
+        <li><a class="resource-link" href="https://www.behance.net" target="_blank">Behance</a> – Design showcase & portfolios</li>
+        <li><a class="resource-link" href="https://dribbble.com" target="_blank">Dribbble</a> – Discover designers & visual projects</li>
+        <li><a class="resource-link" href="https://www.awwwards.com" target="_blank">Awwwards</a> – Top creative websites</li>
+      </ul>
+    </div>
+
+    <div class="resource-section">
+      <h4>📺 Learning</h4>
+      <ul>
+        <li><a class="resource-link" href="https://www.youtube.com/c/TheFuturAcademy" target="_blank">The Futur (YouTube)</a> – Design business & career advice</li>
+        <li><a class="resource-link" href="https://www.skillshare.com" target="_blank">Skillshare</a> – Creative courses for designers</li>
+        <li><a class="resource-link" href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> – HTML, CSS, and JavaScript tutorials</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="text-center py-4 mt-4">
+    <p>&copy; 2025 Jasmine's Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
